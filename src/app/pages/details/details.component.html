@@ -2,7 +2,7 @@
 <poke-header></poke-header>
 <main>
 
-  <!-- <ng-template [ngIf]="isLoading"> -->
+  <ng-template [ngIf]="isLoading">
     <section class="pokemon__names">
       <h1 class="slideInLeft">{{pokemon[0].name}}</h1>
       <h2 class="slideInRight">{{pokemon[1].names[0].name}}</h2>
@@ -35,11 +35,11 @@
         </a>
       </article>
     </section>
-  <!-- </ng-template> -->
+  </ng-template>
 
-  <img
+  <img *ngIf="apiError"
     src="assets/error.png"
-    alt="Deu erro na mostragem do pokemon"
+    alt="Erro ao carregar detalhes do pokemons"
     width="100%"
   >
 </main>
